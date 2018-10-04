@@ -33,12 +33,12 @@
             "name": "data.csv"
         },
         {
-            "assigned_to": "sachinchaudhury",
+            "assigned_to": "not assigned",
             "desc": "",
             "name": "clean.R",
             "task_status": "proposed"
         }
     ],
-    "updated_at": "2018-10-04 16:50:11",
+    "updated_at": "2018-10-04 16:50:18",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
