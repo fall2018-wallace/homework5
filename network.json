@@ -17,12 +17,144 @@
         {
             "ports": [
                 {
-                    "output": "clean_data",
-                    "type": "csv"
+                    "input": "census",
+                    "output": "cleanCensus",
+                    "type": "r_obj"
                 }
             ],
             "source": "clean.R",
-            "target": "data.csv"
+            "target": "Merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "final_df",
+                    "output": "final_df",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "Merge.R",
+            "target": "Plots.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist2",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist3",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist3.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist4",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist4.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist5",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist5.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "box1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "box1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "box2",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "box2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "bar1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "bar1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "bar2",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "bar2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "bar3",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "bar3.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "bar4",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "bar4.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "scatter1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "scatter1.png"
         }
     ],
     "nodes": [
@@ -30,15 +162,60 @@
             "name": "scprc_est_2017_18_pop_res.csv"
         },
         {
-            "name": "data.csv"
-        },
-        {
-            "assigned_to": "not assigned",
+            "assigned_to": "sachinchaudhury",
             "desc": "",
             "name": "clean.R",
-            "task_status": "proposed"
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "sachinchaudhury",
+            "desc": "Merging cleanCensus and USArrests",
+            "name": "Merge.R",
+            "task_status": "in progress"
+        },
+        {
+            "assigned_to": "sachinchaudhury",
+            "desc": "Plotting all the graph",
+            "name": "Plots.R",
+            "task_status": "in progress"
+        },
+        {
+            "name": "hist1.png"
+        },
+        {
+            "name": "hist2.png"
+        },
+        {
+            "name": "hist3.png"
+        },
+        {
+            "name": "hist4.png"
+        },
+        {
+            "name": "hist5.png"
+        },
+        {
+            "name": "box1.png"
+        },
+        {
+            "name": "box2.png"
+        },
+        {
+            "name": "bar1.png"
+        },
+        {
+            "name": "bar2.png"
+        },
+        {
+            "name": "bar3.png"
+        },
+        {
+            "name": "bar4.png"
+        },
+        {
+            "name": "scatter1.png"
         }
     ],
-    "updated_at": "2018-10-04 16:50:18",
+    "updated_at": "2018-10-11 02:43:26",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
