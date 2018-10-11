@@ -45,6 +45,16 @@
             ],
             "source": "Plots.R",
             "target": "hist1.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist2",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist2.png"
         }
     ],
     "nodes": [
@@ -85,6 +95,6 @@
             "name": "hist5.png"
         }
     ],
-    "updated_at": "2018-10-11 02:37:48",
+    "updated_at": "2018-10-11 02:37:59",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
