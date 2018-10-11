@@ -105,6 +105,16 @@
             ],
             "source": "Plots.R",
             "target": "box2.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "bar1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "bar1.png"
         }
     ],
     "nodes": [
@@ -160,6 +170,6 @@
             "name": "bar3.png"
         }
     ],
-    "updated_at": "2018-10-11 02:41:41",
+    "updated_at": "2018-10-11 02:41:47",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
