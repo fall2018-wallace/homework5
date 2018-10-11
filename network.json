@@ -35,6 +35,16 @@
             ],
             "source": "Merge.R",
             "target": "Plots.R"
+        },
+        {
+            "ports": [
+                {
+                    "output": "hist1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "hist1.png"
         }
     ],
     "nodes": [
@@ -63,6 +73,6 @@
             "name": "hist1.png"
         }
     ],
-    "updated_at": "2018-10-11 02:32:19",
+    "updated_at": "2018-10-11 02:32:34",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
