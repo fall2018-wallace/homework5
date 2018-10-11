@@ -54,10 +54,12 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "sachinchaudhury",
             "desc": "Plotting all the graph",
-            "name": "Plots.R"
+            "name": "Plots.R",
+            "task_status": "in progress"
         }
     ],
-    "updated_at": "2018-10-11 02:24:11",
+    "updated_at": "2018-10-11 02:26:43",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
