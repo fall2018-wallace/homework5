@@ -1,33 +1,39 @@
 
 
+#aasign USArrests dataset to a new dataframe
+arrests<-USArrests
+#Merge arrests and census dataset
+final_df<-merge(x=census,y=arrests,by.x="stateName",by.y="row.names")
+str(final_df)
+
 #load ggplot2
 library(ggplot2)
 #plotting histgram of population with specifying color,fill and binwidth
-plot1<-ggplot(df_final,aes(x=population)) +
+plot1<-ggplot(final_df,aes(x=population)) +
   geom_histogram(color="black",fill="red",bin=20)
   
 #plotting histogram of Murder rate with specifying color,fill and binwidth
-plot2<-ggplot(df_final,aes(x=Murder)) +
+plot2<-ggplot(final_df,aes(x=Murder)) +
   geom_histogram(color="black",fill="red",bin=20)
   
 #Plotting histogram of Assault with specifying color,fill and binwidth 
-plot3<-ggplot(df_final,aes(x=Assault)) +
+plot3<-ggplot(final_df,aes(x=Assault)) +
   geom_histogram(color="black",fill="red",bin=20)
  
 #plotting histogram of UrbanPopulation with specifying color,fill and binwidth
-plot4<-ggplot(df_final,aes(x=UrbanPop)) +
+plot4<-ggplot(final_df,aes(x=UrbanPop)) +
   geom_histogram(color="black",fill="red",bin=20)
  
 #Plotting histogram of Rape with specifying color,fill and binwidth
-plot5<-ggplot(df_final,aes(x=Rape)) +
+plot5<-ggplot(final_df,aes(x=Rape)) +
   geom_histogram(color="black",fill="red",bin=20)
 
 #plotting boxplot of population
-plot6<-ggplot(df_final,aes(y=population,x=factor(0))) +
+plot6<-ggplot(final_df,aes(y=population,x=factor(0))) +
        geom_boxplot()
 
 #plotting boxplot of murder rate
-plot7<-ggplot(df_final,aes(y=Murder,x=factor(0))) +
+plot7<-ggplot(final_df,aes(y=Murder,x=factor(0))) +
        geom_boxplot()
 
        
@@ -37,34 +43,36 @@ plot7<-ggplot(df_final,aes(y=Murder,x=factor(0))) +
 #while box plot gives information about quartiles, median, outliers etc. 
 
 # calculating number of murders per state and adding the vector to already existing dataset
-df_final$murder_state<- (df_final$Murder/100000)*df_final$population
+final_df$murder_state<- (final_df$Murder/100000)*final_df$population
 
-#printing df_final
-df_final
+#printing final_df
+final_df
 
 #plotting barchart with number of murders per state using geom_col function
-plot8<-ggplot(df_final,aes(x=stateName,y=murder_state)) +
+plot8<-ggplot(final_df,aes(x=stateName,y=murder_state)) +
        geom_col() +
        scale_y_continuous("Number of murders per state")
        
 #plotting the same barchart as previous one but with rotation of x axis texts
-plot9<-ggplot(df_final,aes(x=stateName,y=murder_state)) +
+plot9<-ggplot(final_df,aes(x=stateName,y=murder_state)) +
        geom_col() + theme(axis.text.x=element_text(angle=90,hjust=1))+
        scale_y_continuous("Number of murders per state") +
        ggtitle("Total Murders") 
        
 #plotting the same barchart as previous one but with sorting the x axis with murder rate
-plot10<-ggplot(df_final,aes(x=reorder(stateName,Murder),y=murder_state)) +
+plot10<-ggplot(final_df,aes(x=reorder(stateName,Murder),y=murder_state)) +
        geom_col() + theme(axis.text.x=element_text(angle=90,hjust=1))+
        labs(x="StateName",y="Number of murders per state")+
        ggtitle("Total Murders")
        
 #same as previous but showing percentOver18 as fill color
-plot11<-ggplot(df_final,aes(x=reorder(stateName,Murder),y=murder_state,fill=percentOver18)) +
+plot11<-ggplot(final_df,aes(x=reorder(stateName,Murder),y=murder_state,fill=percentOver18)) +
        geom_col() + theme(axis.text.x=element_text(angle=90,hjust=1))+
        labs(x="StateName",y="Number of murders per state")+
        ggtitle("Total Murders")
 
 #plotting scatter plot       
-plot12<-ggplot(df_final,aes(x=population,y=percentOver18)) +
+plot12<-ggplot(final_df,aes(x=population,y=percentOver18)) +
         geom_point(aes(size=Murder,color=Murder))
+
+       
