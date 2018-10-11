@@ -24,8 +24,12 @@
             "desc": "",
             "name": "clean.R",
             "task_status": "in progress"
+        },
+        {
+            "desc": "Merging cleanCensus and USArrests",
+            "name": "Merge.R"
         }
     ],
-    "updated_at": "2018-10-11 02:18:14",
+    "updated_at": "2018-10-11 02:20:59",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
