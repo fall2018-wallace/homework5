@@ -145,6 +145,16 @@
             ],
             "source": "Plots.R",
             "target": "bar4.png"
+        },
+        {
+            "ports": [
+                {
+                    "output": "scatter1",
+                    "type": "png"
+                }
+            ],
+            "source": "Plots.R",
+            "target": "scatter1.png"
         }
     ],
     "nodes": [
@@ -206,6 +216,6 @@
             "name": "scatter1.png"
         }
     ],
-    "updated_at": "2018-10-11 02:43:11",
+    "updated_at": "2018-10-11 02:43:26",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
