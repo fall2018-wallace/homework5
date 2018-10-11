@@ -37,10 +37,16 @@
             "task_status": "in progress"
         },
         {
+            "assigned_to": "sachinchaudhury",
             "desc": "Merging cleanCensus and USArrests",
-            "name": "Merge.R"
+            "name": "Merge.R",
+            "task_status": "in progress"
+        },
+        {
+            "desc": "Plotting all the graph",
+            "name": "Plots.R"
         }
     ],
-    "updated_at": "2018-10-11 02:22:10",
+    "updated_at": "2018-10-11 02:23:49",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
