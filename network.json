@@ -24,6 +24,17 @@
             ],
             "source": "clean.R",
             "target": "Merge.R"
+        },
+        {
+            "ports": [
+                {
+                    "input": "final_df",
+                    "output": "final_df",
+                    "type": "r_obj"
+                }
+            ],
+            "source": "Merge.R",
+            "target": "Plots.R"
         }
     ],
     "nodes": [
@@ -47,6 +58,6 @@
             "name": "Plots.R"
         }
     ],
-    "updated_at": "2018-10-11 02:23:49",
+    "updated_at": "2018-10-11 02:24:11",
     "url": "https://github.com/fall2018-wallace/homework5"
 }
